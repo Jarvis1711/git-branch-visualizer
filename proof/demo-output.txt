@@ -1,19 +1,19 @@
 GET /api/health
-{"status":"ok","app":"Git Branch Visualizer","domain":"Productivity"}
+{"status":"ok"}
 
 GET /api/schema
-{"statuses":["backlog", "in-progress", "blocked", "done"],"fields":[{"key":"owner"},{"key":"priority"},{"key":"notes"}]}
+{"domain":"Developer Experience","entity":"Engineering Initiative","statuses":["planned", "building", "testing", "released"]}
 
-POST /api/records
+POST /api/items
 {
   "id": 1,
-  "title": "Demo Record",
-  "status": "in-progress",
+  "title": "Phase3 Demo",
+  "status": "planned",
   "payload": {
-    "owner": "Demo value",
-    "priority": 12,
-    "notes": "seed note"
+    "repo": "sample",
+    "risk_score": 5,
+    "technical_notes": "notes"
   },
-  "created_at": "2026-03-24T15:52:22.033057+00:00",
-  "updated_at": "2026-03-24T15:52:22.033057+00:00"
+  "created_at": "2026-03-24T16:15:11.320700+00:00",
+  "updated_at": "2026-03-24T16:15:11.320700+00:00"
 }
