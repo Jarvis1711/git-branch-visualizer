@@ -1,22 +1,19 @@
-GET /api/health response:
-{"status":"ok","app":"Git Branch Visualizer"}
+GET /api/health
+{"status":"ok","app":"Git Branch Visualizer","domain":"Productivity"}
 
-POST /api/items response:
+GET /api/schema
+{"statuses":["backlog", "in-progress", "blocked", "done"],"fields":[{"key":"owner"},{"key":"priority"},{"key":"notes"}]}
+
+POST /api/records
 {
-    "id": 1,
-    "title": "Demo item",
-    "details": "Created from PoC command",
-    "status": "active",
-    "created_at": "2026-03-24T15:35:11.847617+00:00"
+  "id": 1,
+  "title": "Demo Record",
+  "status": "in-progress",
+  "payload": {
+    "owner": "Demo value",
+    "priority": 12,
+    "notes": "seed note"
+  },
+  "created_at": "2026-03-24T15:52:22.033057+00:00",
+  "updated_at": "2026-03-24T15:52:22.033057+00:00"
 }
-
-GET /api/items response:
-[
-    {
-        "id": 1,
-        "title": "Demo item",
-        "details": "Created from PoC command",
-        "status": "active",
-        "created_at": "2026-03-24T15:35:11.847623+00:00"
-    }
-]
